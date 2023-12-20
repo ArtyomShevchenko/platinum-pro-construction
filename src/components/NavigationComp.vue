@@ -1,27 +1,35 @@
 <template>
-    <div class="navigation">
+    <nav class="navigation">
         <ul class="navigation__list">
-            <li class="navigation__item">
-                <RouterLink class="navigation__link" to="/">General</RouterLink>
-            </li>
-            <li class="navigation__item">
-                <RouterLink class="navigation__link" to="/services">Services</RouterLink>
-            </li>
-            <li class="navigation__item">
-                <RouterLink class="navigation__link" to="/about">About</RouterLink>
-            </li>
-            <li class="navigation__item">
-                <RouterLink class="navigation__link" to="/contact">Contact</RouterLink>
+            <li class="navigation__item" v-for="({ title, href }, i) in links" :key="i">
+                <RouterLink class="navigation__link" :to="href">{{ title }}</RouterLink>
             </li>
         </ul>
-    </div>
+    </nav>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            links: [
+                { title: "General", href: "/" },
+                { title: "Services", href: "/services" },
+                { title: "About", href: "/about" },
+                { title: "Contact", href: "/contact" },
+            ]
+        }
+    },
+}
+</script>
 
 <style scoped>
 .navigation {}
 
 .navigation__list {
     display: flex;
+    align-items: center;
+    margin-inline: auto;
 }
 
 .navigation__item {

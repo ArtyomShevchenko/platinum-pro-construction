@@ -1,15 +1,15 @@
 <template>
-    <section class="general">
-        <div class="general__container">
-            <div class="general__wrapper">
-                <div class="general__content">
-                    general
-                </div>
-            </div>
-        </div>
-    </section>
+    <GeneralTopComp />
 </template>
 
-<script></script>
+<script>
+import GeneralTopComp from '@/components/GeneralTopComp.vue';
+
+export default {
+    components: {
+        GeneralTopComp,
+    }
+}
+</script>
 
 <style scoped></style>
