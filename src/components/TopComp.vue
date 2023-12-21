@@ -8,7 +8,7 @@
                     </div>
                     <h1 class="general-top__title">Platinum ProConstruction</h1>
                     <p class="general-top__text">Committed to construction, dedicated to you.</p>
-                    <button class="general-top__button">Contact us</button>
+                    <RouterLink to="/contact" class="button general-top__button">Contact us</RouterLink>
                 </div>
             </div>
 
@@ -65,7 +65,6 @@ export default {
 .general-top__title {
     color: var(--color-1);
     font-family: "Barlow Condensed";
-    font-size: 100px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -86,5 +85,12 @@ export default {
 
 .general-top__button {
     margin-top: 54px;
+}
+
+@media (max-width: 768px) {
+    .general-top__title {
+        letter-spacing: 1px;
+    }
+
 }
 </style>

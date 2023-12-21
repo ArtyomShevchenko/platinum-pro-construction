@@ -71,13 +71,26 @@ h2 {
     font-weight: 700;
 }
 
+h3 {
+    color: var(--color-2);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h4 {
+    color: var(--color-2);
+    font-size: 40px;
+    font-weight: 700;
+}
+
 p {
     color: var(--color-2);
     font-size: 26px;
     font-weight: 400;
 }
 
-button {
+button,
+.button {
     padding: 15px 71px;
     color: var(--color-2);
     background: linear-gradient(90deg, var(--color-2) 33%, var(--color-1) 66%);
@@ -94,7 +107,44 @@ button {
     transition: background .4s ease, color .2s ease;
 }
 
-button:hover {
+button:hover,
+.button:hover {
     color: var(--color-1);
     background-position: left;
+}
+
+b {
+    font-weight: 700;
+}
+
+@media(max-width: 756px) {
+    h1 {
+        color: var(--color-1);
+        font-size: 52px;
+        font-weight: 700;
+    }
+
+    h2 {
+        color: var(--color-2);
+        font-size: 42px;
+        font-weight: 700;
+    }
+
+    h3 {
+        color: var(--color-2);
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    h4 {
+        color: var(--color-2);
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    p {
+        color: var(--color-2);
+        font-size: 16px;
+        font-weight: 400;
+    }
 }

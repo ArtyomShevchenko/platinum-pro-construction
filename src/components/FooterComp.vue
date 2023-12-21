@@ -3,8 +3,14 @@
         <div class="footer__container">
             <div class="footer__wrapper">
                 <div class="footer__content">
-                    <LogoComp class="logo" />
-                    <NavigationComp />
+                    <LogoComp class="footer__logo" />
+                    <nav class="footer__navigation">
+                        <ul class="footer__navigation-list">
+                            <li class="footer__navigation-item" v-for="({ title, href }, i) in links" :key="i">
+                                <RouterLink class="footer__navigation-link" :to="href">{{ title }}</RouterLink>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="footer__social-container">
                         <a class="footer__social-link" href="https://www.facebook.com/" target="_blank">
                             <svg width="20" height="39" viewBox="0 0 20 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,14 +37,23 @@
 
 <script>
 import LogoComp from './LogoComp.vue';
-import NavigationComp from './NavigationComp.vue';
 
 export default {
     components: {
         LogoComp,
-        NavigationComp
+    },
+    data() {
+        return {
+            links: [
+                { title: "General", href: "/" },
+                { title: "Services", href: "/services" },
+                { title: "About", href: "/about" },
+                { title: "Contact", href: "/contact" },
+            ]
+        }
     }
 }
+
 </script>
 
 <style scoped>
@@ -65,6 +80,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .footer__social-container {
@@ -78,26 +94,50 @@ export default {
     fill: var(--color-1)
 }
 
-.navigation__link {}
-
-.navigation__link:hover {
-    color: var(--color-1);
-}
-
 .router-link-active::before {
     content: "";
     background: var(--color-1);
 }
 
-.logo {
+.footer__logo {
     fill: var(--color-1);
     stroke: var(--color-1);
     width: 190px;
     height: 161px;
 }
 
-.logo:hover {
+.footer__logo:hover {
     fill: var(--color-1);
     stroke: var(--color-1);
+}
+
+.footer__navigation-list {
+    display: flex;
+    gap: 56px;
+    flex-wrap: wrap;
+}
+
+.footer__navigation-item {}
+
+.footer__navigation-link {}
+
+@media (max-width: 650px) {
+    .footer__navigation {
+        order: 3;
+    }
+
+    .footer__logo {
+        width: 85px;
+        height: 80px;
+    }
+
+    .footer__navigation-list {
+        display: block;
+        column-count: 2;
+    }
+
+    .footer__navigation-item {
+        margin-bottom: 1rem;
+    }
 }
 </style>
