@@ -7,10 +7,14 @@
     --color-3: #000;
     --color-4: #57677E;
     --color-5: #9F9F9F;
+
+    --font-1: "Arial";
+    --font-2: "Barlow Condensed";
+    --font-3: "Inter";
 }
 
 body {
-    font-family: "Arial";
+    font-family: var(--font-1);
 }
 
 *[class*="__container"] {
@@ -54,7 +58,7 @@ h3,
 h4,
 p {
     text-align: center;
-    font-family: "Arial";
+    font-family: var(--font-1);
     font-style: normal;
     line-height: normal;
 }
@@ -96,7 +100,7 @@ button,
     background: linear-gradient(90deg, var(--color-2) 33%, var(--color-1) 66%);
     background-size: 300% 100%;
     background-position: right;
-    font-family: "Arial";
+    font-family: var(--font-1);
     font-size: 25px;
     font-style: normal;
     font-weight: 400;

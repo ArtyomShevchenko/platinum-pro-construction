@@ -37,6 +37,8 @@ export default {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1.38px;
+
+    position: relative;
 }
 
 .header__container {
@@ -84,11 +86,11 @@ export default {
         display: block;
     }
 
-    .header__container {
+    /* .header__container {
         position: absolute;
         z-index: 10;
         width: 100%;
-    }
+    } */
 
     .header__logo {
         fill: var(--color-1);

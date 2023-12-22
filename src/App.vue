@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <HeaderComp class="header" />
+    <HeaderComp />
     <main class="main">
       <RouterView></RouterView>
     </main>
@@ -31,14 +31,5 @@ export default {
 
 .main {
   flex: 1 1 auto;
-}
-
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
 }
 </style>
