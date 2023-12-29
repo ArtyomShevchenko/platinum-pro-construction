@@ -86,7 +86,8 @@ video {
     font: inherit;
     vertical-align: baseline;
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    box-sizing: border-box;
 }
 
 article,

@@ -5,8 +5,8 @@
                 <div class="reviews__content">
                     <h2 class="reviews__title">Reviews</h2>
 
-                    <swiper :effect="'coverflow'" :grabCursor="true" :centeredSlides="true" :slidesPerView="'auto'"
-                        :initialSlide="'1'" :autoplay="{
+                    <swiper class="swiper" :effect="'coverflow'" :grabCursor="true" :centeredSlides="true"
+                        :slidesPerView="'auto'" :initialSlide="'1'" :autoplay="{
                             delay: 5000,
                             disableOnInteraction: false,
                         }" :coverflowEffect="{
@@ -14,9 +14,9 @@
     stretch: 0,
     depth: 100,
     modifier: 1,
-    slideShadows: true,
+    slideShadows: false,
 }" :pagination="true" :modules="modules">
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <div class="reviews__card">
                                 <p class="reviews__card-text">I recently had the pleasure of working with Platinum Pro
                                     Construction guys on a home renovation project, and I couldn't be more impressed with
@@ -25,7 +25,7 @@
                                 </p>
                             </div>
                         </swiper-slide>
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <div class="reviews__card">
                                 <p class="reviews__card-text">I recently had the pleasure of working with Platinum Pro
                                     Construction guys on a home renovation project, and I couldn't be more impressed with
@@ -34,7 +34,7 @@
                                 </p>
                             </div>
                         </swiper-slide>
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <div class="reviews__card">
                                 <p class="reviews__card-text">I recently had the pleasure of working with Platinum Pro
                                     Construction guys on a home renovation project, and I couldn't be more impressed with
@@ -43,7 +43,7 @@
                                 </p>
                             </div>
                         </swiper-slide>
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <div class="reviews__card">
                                 <p class="reviews__card-text">I recently had the pleasure of working with Platinum Pro
                                     Construction guys on a home renovation project, and I couldn't be more impressed with
@@ -52,7 +52,7 @@
                                 </p>
                             </div>
                         </swiper-slide>
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <div class="reviews__card">
                                 <p class="reviews__card-text">I recently had the pleasure of working with Platinum Pro
                                     Construction guys on a home renovation project, and I couldn't be more impressed with
@@ -68,7 +68,7 @@
     </section>
 </template>
 
-<script>
+<script scoped>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -88,7 +88,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .reviews {}
 
 .reviews__container {
@@ -148,10 +148,11 @@ export default {
     background: none !important;
 }
 
-.swiper-pagination-bullet {
+.swiper>>>.swiper-pagination-bullet {
     width: 20px;
     height: 20px;
     margin-top: 25px;
+    background: #9F9F9F;
 }
 
 .swiper-pagination-bullet-active {

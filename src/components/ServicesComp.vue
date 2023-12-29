@@ -11,7 +11,7 @@
                             <p class="services__card-text">Metal roofing offers a resilient and sleek solution for your
                                 home. Its longevity and modern
                                 appeal make it an excellent choice for protecting and enhancing your property.</p>
-                            <div class="services__card-button button">Learn more</div>
+                            <RouterLink to="/metal-roofing" class="services__card-button button">Learn more</RouterLink>
                         </div>
 
                         <div class="services__card">
@@ -20,7 +20,7 @@
                             <p class="services__card-text">Elevate your interiors with our expert painting and drywall
                                 services. We bring life to your walls, adding color and texture to create a fresh, polished
                                 look.</p>
-                            <div class="services__card-button button">Learn more</div>
+                            <RouterLink to="/painting-drywalls" class="services__card-button button">Learn more</RouterLink>
                         </div>
 
                         <div class="services__card">
@@ -29,7 +29,7 @@
                             <p class="services__card-text">Enhance your home with our precision windows and doors
                                 installation. Experience a perfect blend of aesthetics, security, and energy efficiency for
                                 your living spaces.</p>
-                            <div class="services__card-button button">Learn more</div>
+                            <RouterLink to="/windows-doors" class="services__card-button button">Learn more</RouterLink>
                         </div>
 
                         <div class="services__card">
@@ -38,7 +38,7 @@
                             <p class="services__card-text">Our landscaping services craft outdoor havens. Elevate your
                                 surroundings with expert design, lush greenery, and serene elements, fostering a harmonious
                                 connection with the outdoors.</p>
-                            <div class="services__card-button button">Learn more</div>
+                            <RouterLink to="/landscaping" class="services__card-button button">Learn more</RouterLink>
                         </div>
 
                         <div class="services__card">
@@ -47,7 +47,7 @@
                             <p class="services__card-text">Our flooring solutions redefine spaces. From elegant hardwood to
                                 versatile tile, we transform floors into stunning canvases that marry style with durability.
                             </p>
-                            <div class="services__card-button button">Learn more</div>
+                            <RouterLink to="/flooring" class="services__card-button button">Learn more</RouterLink>
                         </div>
                     </div>
                 </div>
