@@ -1,35 +1,19 @@
 <template>
-    <main class="metal-roofing">
-        <TitleComp src="assets/images/metal-roofing/metal-roofing-top.jpg">
-            Metal roofing
+    <main class="painting-drywals">
+        <!-- <TitleComp src="assets/images/metal-roofing/metal-roofing-top.jpg"> -->
+        <TitleComp>
+            Painting and drywalls
         </TitleComp>
 
-        <section class="metal-roofing-discover__container">
-            <div class="metal-roofing-discover__wrapper">
-                <div class="metal-roofing-discover__content">
-                    <h3 class="metal-roofing-discover__title">Discover the Superiority of Metal Roofing:</h3>
-                    <p class="metal-roofing-discover__text">
-                        Elevate your roofing solution with the durability and elegance of metal roofing. Crafted from
-                        high-quality steel, aluminum, copper, or zinc, metal roofing provides an exceptional blend of
-                        strength, longevity, and style.</p>
-                </div>
-            </div>
-        </section>
+        <DiscoverComp>
+            <h3>Transforming Spaces with Expert Painting and Drywall Services:</h3>
+            <p>Welcome to Platinum Pro Construction, where we specialize in revitalizing interiors through
+                top-notch painting and drywall solutions. Our skilled team brings life to your spaces, creating a
+                harmonious blend of aesthetics and functionality.
+            </p>
+        </DiscoverComp>
 
-        <section class="metal-roofing-list__container metal-roofing-list__container--bg-light-filter">
-            <div class="metal-roofing-list__wrapper">
-                <div class="metal-roofing-list__content">
-                    <ol class="metal-roofing-list__list">
-                        <li class="metal-roofing-list__item" v-for="({ title, text }, index) in metalRoofingList"
-                            :key="index">
-                            <p class="metal-roofing-list__count">{{ index + 1 }}</p>
-                            <h3 class="metal-roofing-list__title">{{ title }}</h3>
-                            <p class="metal-roofing-list__text">{{ text }}</p>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </section>
+        <MainInfo :data="mainInfoData" src="assets/images/about-cards.jpg"></MainInfo>
 
         <section class="metal-roofing-swiper">
             <div class="metal-roofing-swiper__container">
@@ -70,21 +54,11 @@
             </div>
         </section>
 
-        <section class="metal-roofing-contact">
-            <div class="metal-roofing-contact__container">
-                <div class="metal-roofing-contact__wrapper">
-                    <div class="metal-roofing-contact__content">
-                        <p class="metal-roofing-contact__title">Elevate Your Roof to New Heights with Metal Roofing!</p>
-                        <RouterLink to="/contact" class="button metal-roofing-contact__button">Contact us</RouterLink>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <ContacInfoComp />
     </main>
 </template>
 
 <script>
-import TitleComp from "@/components/TitleComp.vue"
 import { Navigation, Pagination, Autoplay, A11y, Grid } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
@@ -92,12 +66,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
 
+import TitleComp from "@/components/TitleComp.vue";
+import DiscoverComp from "@/components/DiscoverComp.vue";
+import MainInfo from '@/components/MainInfoComp.vue';
+import ContacInfoComp from '@/components/ContacInfoComp.vue';
 
 export default {
     components: {
         TitleComp,
         Swiper,
         SwiperSlide,
+
+        DiscoverComp,
+        MainInfo,
+        ContacInfoComp,
     },
     setup() {
         return {
@@ -106,15 +88,25 @@ export default {
     },
     data() {
         return {
-            metalRoofingList: [
-                { title: "Lasting Durability", text: "With a lifespan of 40-70 years or more, metal roofs outshine traditional materials in terms of resilience and longevity." },
-                { title: "Weather Resilience", text: "Embrace worry-free protection against rain, snow, hail, and wind. Metal roofs effortlessly shed snow, reducing structural strain." },
-                { title: "Efficient Energy Performance", text: "Reflective surfaces curb heat absorption, slashing cooling costs and enhancing energy efficiency." },
-                { title: "Minimal Maintenance", text: "Enjoy hassle-free upkeep with metal's resistance to rot, decay, and insect damage. Occasional cleaning and checks keep your roof in prime condition." },
-                { title: "Fire Safeguard", text: "Non-combustible metal offers added defense against fires, making it a smart choice, especially in fire-prone areas." },
-                { title: "Aesthetic Freedom", text: "Personalize your roof's appearance with a spectrum of colors, styles, and profiles to match your vision and architectural design." },
-                { title: "Seamless Installation", text: "Our experts ensure seamless installation, securing metal panels with precision for water-tightness and longevity. Adequate ventilation and insulation prevent warping, maintaining your roof's integrity." },
-                { title: "Economical Long-Term Choice", text: "While the initial investment may be higher, the enduring quality of metal roofing, coupled with lowered maintenance and energy expenses, make it a cost-effective, environmentally responsible choice in the long run." },
+            mainInfoData: [
+                {
+                    title: "Painting Services",
+                    cards: [
+                        { title: "Elevate Ambiance", text: "Our painting experts understand the power of color. Whether you seek serene neutrals, vibrant accents, or a unique palette, we'll help you achieve the perfect atmosphere." },
+                        { title: "Precision Application", text: "Using premium paints and cutting-edge techniques, we ensure smooth and flawless application for a professional finish that stands the test of time." },
+                        { title: "Customized Design", text: "Our team collaborates closely with you to bring your vision to life. From color selection to texture implementation, we create a space that resonates with your style." },
+                        { title: "Residential and Commercial", text: "Whether revamping your home or enhancing your business environment, our painting services cater to residential and commercial needs." },
+                    ]
+                },
+                {
+                    title: "Drywall Solutions",
+                    cards: [
+                        { title: "Seamless Installation", text: "Our drywall experts craft a clean canvas for your interiors. With meticulous installation, we create even surfaces ready for the transformative touch of paint." },
+                        { title: "Repair and Restoration", text: "From minor dents to extensive damage, we have the expertise to restore your walls to their original condition. Our team ensures a seamless blend, making repairs virtually invisible." },
+                        { title: "Soundproofing and Insulation", text: "Beyond aesthetics, our drywall services offer functional benefits. Enhance privacy and energy efficiency through our specialized soundproofing and insulation solutions." },
+                        { title: "Timely Project Completion", text: "We understand the importance of timelines. Our efficient approach ensures your painting and drywall projects are completed within schedule, minimizing disruption." },
+                    ]
+                },
             ]
         }
     },
@@ -177,7 +169,7 @@ export default {
 
 
 
-
+/* 
 
 .metal-roofing-discover__container {
     padding: 222px 0;
@@ -401,48 +393,6 @@ export default {
     }
 }
 
-
-
-
-
-
-.metal-roofing-contact {}
-
-.metal-roofing-contact__container {
-    padding-top: 60px;
-    padding-bottom: 100px;
-}
-
-.metal-roofing-contact__wrapper {}
-
-.metal-roofing-contact__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-}
-
-.metal-roofing-contact__title {
-    color: var(--color-3);
-    font-family: var(--font-1);
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.5px;
-}
-
-.metal-roofing-contact__button {
-    color: var(--color-1);
-    font-family: var(--font-1);
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.5px;
-    background: var(--color-2);
-}
-
 @media (max-width: 1024px) {
     .metal-roofing-contact__container {
         padding: 50px 0;
@@ -489,5 +439,5 @@ export default {
         font-size: 9px;
         padding: 6px 12px;
     }
-}
+} */
 </style>

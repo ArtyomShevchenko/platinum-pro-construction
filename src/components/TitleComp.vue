@@ -1,6 +1,6 @@
 <template>
-    <section :style="{ 'background-image': 'url(' + src + ')' }" class="top__container top__container--bg-dark-filter">
-        <div class="top__wrapper">
+    <section class="top__container top__container--bg-dark-filter" :style="image">
+        <div class=" top__wrapper">
             <div class="top__content">
                 <h1 class="top__title">
                     <slot />
@@ -15,27 +15,34 @@ export default {
     props: {
         src: String
     },
-    mounted() {
-        console.log(this.src)
-    },
-    methods: {
-        getImg() {
-            return `url(${require(this.src)})`
+    computed: {
+        image() {
+            if (this.src) {
+                return {
+                    backgroundImage: `url( ${require('@/' + this.src)} )`
+                }
+            }
+
+            return null
         }
-    }
+    },
 }
 </script>
 
 <style >
-.top {}
+:root {
+    --height: 614px;
+}
 
 .top__container {
     background-size: cover;
     background-position: center;
     position: relative;
     min-height: 614px;
+    min-height: var(--height);
     display: flex;
     align-items: center;
+    padding: 0;
 }
 
 .top__wrapper {}
@@ -47,12 +54,24 @@ export default {
 }
 
 @media(max-width: 1024px) {
+    :root {
+        --height: 314px;
+    }
+
+    .top__container {
+        min-height: calc(var(--height) + 74px);
+    }
+
     .top__title {
         font-size: 45px;
     }
 }
 
 @media (max-width: 425px) {
+    :root {
+        --height: 114px;
+    }
+
     .top__title {
         text-align: center;
         font-family: var(--font-1);

@@ -1,11 +1,15 @@
 <template>
     <main class="services">
+        <TitleComp src="assets/images/services-top.jpg">
+            Our Services
+        </TitleComp>
         <section class="services__container">
-            <div class="services__title-container services__title-container--bg-dark-filter">
+            <!-- <div class="services__title-container services__title-container--bg-dark-filter">
                 <div class="services__wrapper">
                     <h1 class="services__title">Our Services</h1>
                 </div>
-            </div>
+            </div> -->
+
             <div class="servces__wrapper">
                 <div class="services__cards-container">
                     <article class="services__card">
@@ -55,16 +59,23 @@
 </template>
 
 <script>
+import TitleComp from "@/components/TitleComp.vue"
+
+export default {
+    components: {
+        TitleComp
+    }
+}
 </script>
 
 <style scoped>
 .services {}
 
-.services__container {
+/* .services__container {
     padding: 0;
-}
+} */
 
-.services__title-container {
+/* .services__title-container {
     background-image: url("../assets/images/services-top.jpg");
     background-size: cover;
     background-position: center;
@@ -72,7 +83,7 @@
     min-height: 614px;
     display: flex;
     align-items: center;
-}
+} */
 
 .services__wrapper {}
 

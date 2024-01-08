@@ -1,14 +1,13 @@
 <template>
     <div class="navigation">
         <div class="burger__icon" v-on:click="isVisible = !isVisible">
-            <span class="burger__icon-line"></span>
-            <span class="burger__icon-line"></span>
-            <span class="burger__icon-line"></span>
+            <div class="burger__icon-line"></div>
+            <div class="burger__icon-line"></div>
+            <div class="burger__icon-line"></div>
         </div>
 
         <nav class="navigation__body" v-if="isVisible">
             <div class="navigation__cross" @click="isVisible = !isVisible"></div>
-
             <ul v-for="({ title, href, links }, index) in navigation" :key="index" class="navigation__list"
                 :class="{ 'navigation__list--visible': open }">
 
@@ -73,10 +72,10 @@ export default {
     line-height: normal;
     letter-spacing: 0.6px;
     text-align: start;
+    margin-inline: 1rem;
 }
 
 .burger__icon {
-    padding: 1rem;
     width: 16px;
     height: 10px;
     display: flex;
@@ -85,8 +84,7 @@ export default {
 }
 
 .burger__icon-line {
-    display: block;
-    width: 100%;
+    min-width: 20px;
     height: 2px;
     background-color: var(--color-1);
 }
@@ -152,9 +150,8 @@ export default {
     letter-spacing: 0.6px;
     padding: 4px 0 4px 20px;
     cursor: pointer;
-    transition: color .2s ease;
+    transition: color .0s ease;
 }
-
 
 .navigation__list-item:hover {
     color: var(--color-3)
@@ -165,7 +162,7 @@ export default {
 }
 
 .navigation__list-title svg {
-    transition: transform .2s ease;
+    transition: transform 0s ease;
 }
 
 .navigation__list--visible .navigation__list-title svg {
@@ -177,8 +174,7 @@ export default {
     height: 12px;
     position: relative;
     padding: 5px;
-    margin-left: auto;
-    margin-bottom: 7px;
+    margin: 7px 18px 7px auto;
 }
 
 .navigation__cross::before,
@@ -198,4 +194,10 @@ export default {
 .navigation__cross::after {
     transform: rotate(-45deg);
 }
+
+/* @media (max-width: 1000px) {
+    .navigation {
+        background-color: lime;
+    }
+} */
 </style>

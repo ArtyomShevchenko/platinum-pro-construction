@@ -1,11 +1,15 @@
 <template>
     <main class="ablout">
+        <TitleComp src="assets/images/about-top.jpg">
+            About
+        </TitleComp>
+
         <div class="about__container">
-            <section class="about__title-container about__title-container--bg-dark-filter">
+            <!-- <section class="about__title-container about__title-container--bg-dark-filter">
                 <div class="about__wrapper">
                     <h1 class="about__title">About Us</h1>
                 </div>
-            </section>
+            </section> -->
 
             <section class="about__our-goals">
                 <div class="about__wrapper">
@@ -41,13 +45,15 @@
                     </div>
                 </div>
             </section>
-
         </div>
     </main>
 </template>
 
 <script>
+import TitleComp from '../components/TitleComp.vue'
+
 export default {
+    components: { TitleComp },
     data() {
         return {
             cards: [
@@ -67,7 +73,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <style scoped>
@@ -77,7 +82,7 @@ export default {
     padding: 0;
 }
 
-.about__title-container {
+/* .about__title-container {
     background-image: url("../assets/images/about-top.jpg");
     background-size: cover;
     background-position: center;
@@ -85,7 +90,7 @@ export default {
     min-height: 614px;
     display: flex;
     align-items: center;
-}
+} */
 
 .about__wrapper {}
 

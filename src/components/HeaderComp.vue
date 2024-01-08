@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .header {
     color: var(--color-3);
-    background-color: var(--color-1);
+    /* background-color: var(--color-1); */
     font-family: "Arial";
     font-size: 23px;
     font-style: normal;
@@ -51,10 +51,14 @@ export default {
 
 
 .header__content {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
 }
 
 .header__title {
@@ -74,6 +78,12 @@ export default {
 }
 
 @media (max-width: 1000px) {
+    .header {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+    }
+
     .header__title {
         display: none;
     }
@@ -84,6 +94,13 @@ export default {
 
     .header__burger {
         display: block;
+    }
+
+    .header__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
     }
 
     /* .header__container {

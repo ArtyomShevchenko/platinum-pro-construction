@@ -3,7 +3,7 @@
         <div class="footer__container">
             <div class="footer__wrapper">
                 <div class="footer__content">
-                    <LogoComp class="footer__logo" />
+                    <LogoComp class="footer__logo" color="#fff" />
                     <nav class="footer__navigation">
                         <ul class="footer__navigation-list">
                             <li class="footer__navigation-item" v-for="({ title, href }, i) in links" :key="i">

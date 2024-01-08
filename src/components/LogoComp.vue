@@ -4,9 +4,9 @@
         <path d="M32.3355 22.5373H11.7247L32.3355 9.52686V22.5373Z" stroke-width="0.00786369" />
         <path d="M18.7667 15.6566V18.0904L15.9319 19.8873V15.6566H18.7667Z" stroke-width="0.00786369" />
         <path d="M15.7982 41.5203V25.5728H32.3356V41.5203H15.7982Z" stroke-width="0.00786369" />
-        <path d="M31.8479 28.8755H29.0092V31.7221H31.8479V28.8755Z" fill="white" stroke="#738087"
+        <path d="M31.8479 28.8755H29.0092V31.7221H31.8479V28.8755Z" fill="none" stroke="#738087"
             stroke-width="0.00786369" />
-        <path d="M31.8479 32.1782H29.0092V35.0328H31.8479V32.1782Z" fill="white" stroke-opacity="0.137255"
+        <path d="M31.8479 32.1782H29.0092V35.0328H31.8479V32.1782Z" fill="none" stroke-opacity="0.137255"
             stroke-width="0.00786369" />
         <path d="M41.9961 7.91876V45.8454" stroke-width="0.495413" />
         <path d="M49.6082 12.1337V45.8453" stroke-width="0.495413" />
@@ -19,16 +19,22 @@
     </svg>
 </template>
 
+<script>
+export default {
+    props: {
+        color: String,
+    },
+    computed: {
+        colorFill() {
+            return this.color ? this.color : "#000"
+        }
+    }
+}
+</script>
+
 <style scoped>
 svg {
-    cursor: pointer;
-    fill: var(--color-3);
-    stroke: var(--color-3);
-    transition: all .2s;
-}
-
-svg:hover {
-    fill: var(--color-2);
-    stroke: var(--color-2);
+    fill: v-bind(colorFill);
+    stroke: v-bind(colorFill);
 }
 </style>

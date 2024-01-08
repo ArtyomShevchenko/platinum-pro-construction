@@ -4,6 +4,7 @@ import ContactView from "@/Views/ContactView.vue";
 import ServicesView from "@/Views/ServicesView.vue";
 import NotFoundView from "@/Views/NotFoundView.vue";
 import MetalRoofingView from "@/Views/MetalRoofingView.vue";
+import PaintingDrywalsView from "@/Views/PaintingDrywalsView.vue";
 
 export const routes = [
     { path: '/', component: HomeView },
@@ -11,5 +12,6 @@ export const routes = [
     { path: '/contact', component: ContactView },
     { path: '/services', component: ServicesView },
     { path: '/metal-roofing', component: MetalRoofingView },
+    { path: '/painting-drywals', component: PaintingDrywalsView },
     { path: "/:pathMatch(.*)*", component: NotFoundView }
 ]
