@@ -24,9 +24,6 @@ export default {
         src: String,
         data: Array
     },
-    mounted() {
-        console.log(this.data)
-    },
     computed: {
         image() {
             if (this.src) {

@@ -1,56 +1,59 @@
 <template>
     <main class="ablout">
-        <TitleComp src="assets/images/about-top.jpg">
-            About
+        <TitleComp src="assets/images/about/about-top.jpg">
+            About Us
         </TitleComp>
 
-        <div class="about__container">
-            <!-- <section class="about__title-container about__title-container--bg-dark-filter">
-                <div class="about__wrapper">
-                    <h1 class="about__title">About Us</h1>
+        <section class="about-goals">
+            <div class="about-goals__container">
+                <div class="about-goals__wrapper">
+                    <div class="about-goals__content">
+                        <p class="about-goals__text"><span>Our goal</span> is to provide various construction-related
+                            services,
+                            deliver
+                            high-quality projects, and meet clients' needs while ensuring safety, efficiency, and
+                            sustainability.</p>
+                    </div>
                 </div>
-            </section> -->
+            </div>
+        </section>
 
-            <section class="about__our-goals">
-                <div class="about__wrapper">
-                    <p class="about__our-goals-text"><span>Our goal</span> is to provide various construction-related
-                        services,
-                        deliver
-                        high-quality projects, and meet clients' needs while ensuring safety, efficiency, and
-                        sustainability.</p>
-                </div>
-            </section>
-
-            <section class="about__cards-container about__cards-container--bg-light-filter">
-                <div class="about__wrapper">
-                    <h2 class="about__cards-title">The pillars our company stands on are the following:</h2>
-                    <div class="about__cards">
-                        <div class="about__card" v-for="({ title, text }, index) in cards" :key="index">
-                            <h3 class="about__card-title">{{ title }}</h3>
-                            <p class="about__card-text">{{ text }}</p>
+        <section class="about-main-info">
+            <div class="about-main-info__container about-main-info__container--bg-light-filter">
+                <div class="about-main-info__wrapper">
+                    <h2 class="about-main-info__title">The pillars our company stands on are the following:</h2>
+                    <div class="about-main-info__cards">
+                        <div class="about-main-info__card" v-for="({ title, text }, index) in cards" :key="index">
+                            <h3 class="about-main-info__card-title">{{ title }}</h3>
+                            <p class="about-main-info__card-text">{{ text }}</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="about__overall">
-                <div class="about__wrapper">
-                    <div class="about__overall-content">
-                        <p class="about__overall-text">Overall, the goal of Platinum Pro Construction is to be a reputable,
+        <section class="about-overall">
+            <div class="about-overall__container">
+                <div class="about-overall__wrapper">
+                    <div class="about-overall__content">
+                        <p class="about-overall__text">Overall, the goal of Platinum Pro Construction is to be a
+                            reputable,
                             reliable, and competitive player in the construction industry, delivering projects that
                             positively
-                            impact communities and stakeholders while ensuring a sustainable and profitable future for the
+                            impact communities and stakeholders while ensuring a sustainable and profitable future for
+                            the
                             company.</p>
-                        <img src="../assets/images/about-overall.jpg" alt="Image" class="about__overall-img">
+                        <img src="@/assets/images/about/about-overall.jpg" alt="Image" class="about-overall__img">
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
     </main>
 </template>
 
 <script>
-import TitleComp from '../components/TitleComp.vue'
+import TitleComp from '@/components/TitleComp.vue'
 
 export default {
     components: { TitleComp },
@@ -78,31 +81,19 @@ export default {
 <style scoped>
 .ablout {}
 
-.about__container {
-    padding: 0;
-}
+.about-goals {}
 
-/* .about__title-container {
-    background-image: url("../assets/images/about-top.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    min-height: 614px;
-    display: flex;
-    align-items: center;
-} */
-
-.about__wrapper {}
-
-.about__title {}
-
-.about__content {}
-
-.about__our-goals {
+.about-goals__container {
     padding: 160px 0;
 }
 
-.about__our-goals-text {
+.about-goals__wrapper {
+    max-width: 1312px;
+}
+
+.about-goals__content {}
+
+.about-goals__text {
     color: var(--color-2);
     text-align: center;
     font-family: "Arial";
@@ -112,38 +103,42 @@ export default {
     line-height: normal;
 }
 
-.about__our-goals-text span {
+.about-goals__text span {
     font-weight: 700;
 }
 
-.about__cards-container {
-    background-image: url("../assets/images/about-top.jpg");
+.about-main-info {}
+
+.about-main-info__container {
+    background-image: url("../assets/images/about/about-top.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
     padding: 132px 0;
 }
 
-.about__cards-title {
+.about-main-info__title {
     color: var(--color-2);
     font-family: var(--font-1);
     font-size: 44px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 }
 
-.about__cards {
+.about-main-info__cards {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 126px 38px;
+    justify-content: center;
 }
 
-.about__card {}
+.about-main-info__card {}
 
 
-.about__card-title {
+.about-main-info__card-title {
     color: var(--color-2);
     text-align: center;
     font-family: var(--font-1);
@@ -153,7 +148,7 @@ export default {
     line-height: normal;
 }
 
-.about__card-text {
+.about-main-info__card-text {
     color: var(--color-2);
     text-align: center;
     font-family: var(--font-1);
@@ -166,19 +161,25 @@ export default {
 
 .about__overall {}
 
-.about__overall-content {
+.about-overall__container {
+    padding: 0;
+}
+
+.about-overall__wrapper {}
+
+.about-overall__content {
     display: grid;
     grid-template-columns: 100px 1fr 1fr 100px;
     place-items: center;
 }
 
-.about__overall-text {
+.about-overall__text {
     max-width: 656px;
     text-align: start;
     grid-column: 2/3
 }
 
-.about__overall-img {
+.about-overall__img {
     transform: translateY(-89px);
     max-width: 440px;
     aspect-ratio: 1/1.5;
@@ -188,37 +189,20 @@ export default {
 }
 
 @media (max-width: 1000px) {
-
-    .about__cards {
-        margin-top: 80px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px 28px;
-    }
-
-    .about__overall-text {
+    .about-overall__text {
         font-size: 26px;
     }
 }
 
-
 @media (max-width: 768px) {
-
-    .about__cards {
-        margin-top: 80px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 80px 22px;
-    }
-
-    .about__overall-content {
+    .about-overall__content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
         gap: 1rem;
     }
 
-    .about__overall-text {
+    .about-overall__text {
         max-width: 656px;
         text-align: start;
         grid-column: auto;
@@ -226,17 +210,8 @@ export default {
     }
 }
 
-
 @media (max-width: 550px) {
-
-    .about__cards {
-        margin-top: 80px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .about__overall-img {
+    .about-overall__img {
         transform: translateY(0);
         max-width: 440px;
         max-height: 660px;
@@ -244,7 +219,7 @@ export default {
         width: 100%;
     }
 
-    .about__overall-text {
+    .about-overall__text {
         font-size: 9px;
         text-align: center;
     }

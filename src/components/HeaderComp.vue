@@ -6,7 +6,7 @@
                     <LogoComp class="header__logo" />
                     <BurgerMenuComp class="header__burger" />
                     <NavigationComp class="header__navigation" />
-                    <h3 class="header__title">Platinum Pro Moving</h3>
+                    <RouterLink to="/platinum-pro-moving" class="header__title">Platinum Pro Moving</RouterLink>
                 </div>
             </div>
         </div>

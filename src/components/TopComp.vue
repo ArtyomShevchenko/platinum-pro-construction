@@ -29,8 +29,6 @@ export default {
 
 .general-top__container {
     background-image: url("../assets/images/home-top.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .general-top__wrapper {}

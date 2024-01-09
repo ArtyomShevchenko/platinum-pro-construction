@@ -27,7 +27,8 @@
                 </li>
             </ul>
 
-            <h3 class="navigation__list-title navigation__title">Platinum Pro<br />Moving</h3>
+            <RouterLink to="/platinum-pro-moving" class="navigation__list-title navigation__title">Platinum Pro<br />Moving
+            </RouterLink>
         </nav>
     </div>
 </template>
@@ -81,6 +82,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .burger__icon-line {
@@ -131,8 +133,7 @@ export default {
     line-height: normal;
     letter-spacing: 0.6px;
     text-align: start;
-    cursor: auto;
-    user-select: none;
+    cursor: pointer;
 }
 
 .list-title:hover {
@@ -175,6 +176,7 @@ export default {
     position: relative;
     padding: 5px;
     margin: 7px 18px 7px auto;
+    cursor: pointer;
 }
 
 .navigation__cross::before,
