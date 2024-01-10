@@ -36,11 +36,12 @@ export default {
 <style scoped>
 .overall {
     background-color: var(--bg);
-    color: var(--color)
+    color: var(--color);
 }
 
 .overall__container {
     padding: 0;
+    position: relative;
 }
 
 .overall__wrapper {}
@@ -69,6 +70,13 @@ export default {
     width: 100%;
     position: relative;
 }
+
+/* .overall>>>img:nth-child(3) {
+    position: absolute;
+    transform: translate(-70%, -130px) scale(1.3);
+    border: 10px solid red;
+} */
+
 
 /* 
 @media (max-width: 1000px) {

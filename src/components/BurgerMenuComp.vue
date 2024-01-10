@@ -27,7 +27,8 @@
                 </li>
             </ul>
 
-            <RouterLink to="/platinum-pro-moving" class="navigation__list-title navigation__title">Platinum Pro<br />Moving
+            <RouterLink to="/platinum-pro-moving" @click="isVisible = false"
+                class="navigation__list-title navigation__title">Platinum Pro<br />Moving
             </RouterLink>
         </nav>
     </div>
@@ -43,10 +44,11 @@ export default {
                 { title: "General", href: "/" },
                 {
                     title: "Services", href: "/services", links: [
-                        { title: "Services One", href: "/services-1" },
-                        { title: "Services Two", href: "/services-2" },
-                        { title: "Services Three", href: "/services-3" },
-                        { title: "Services Four", href: "/services-4" },
+                        { title: "Metal roofing", href: "/metal-roofing" },
+                        { title: "Painting / Drywalls", href: "/painting-drywals" },
+                        { title: "Windows / Doors", href: "/windows-doors" },
+                        { title: "Landscaping", href: "/landscaping" },
+                        { title: "Flooring", href: "/flooring" },
                     ]
                 },
                 { title: "About", href: "/about" },

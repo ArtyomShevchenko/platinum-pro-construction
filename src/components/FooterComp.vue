@@ -77,10 +77,8 @@ export default {
 
 .footer__content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    flex-wrap: wrap;
 }
 
 .footer__social-container {
@@ -106,38 +104,53 @@ export default {
     height: 161px;
 }
 
-.footer__logo:hover {
-    fill: var(--color-1);
-    stroke: var(--color-1);
+.footer__navigation {
+    flex: 1;
 }
 
 .footer__navigation-list {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 56px;
-    flex-wrap: wrap;
 }
 
-.footer__navigation-item {}
+.footer__navigation-item {
+    display: flex;
+}
 
 .footer__navigation-link {}
 
 @media (max-width: 650px) {
-    .footer__navigation {
-        order: 3;
+    .footer__logo {
+        width: 41px;
+        height: 35px;
     }
 
-    .footer__logo {
-        width: 85px;
-        height: 80px;
+    .footer__navigation-link {
+        font-size: 7px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.42px;
     }
 
     .footer__navigation-list {
-        display: block;
-        column-count: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
     }
 
-    .footer__navigation-item {
-        margin-bottom: 1rem;
+    .footer__social-container {
+        display: flex;
+        gap: 8px;
+    }
+
+    .footer__social-link>svg {
+        fill: var(--color-1);
+        height: 12px;
+        width: 12px;
     }
 }
 </style>

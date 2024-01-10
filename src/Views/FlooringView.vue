@@ -1,7 +1,7 @@
 <template>
     <main class="flooring">
         <TitleComp src="assets/images/flooring/top.jpg">
-            FlooringView
+            Flooring
         </TitleComp>
         <DiscoverComp>
             <h3> Unveil the Beauty of Your Space with Expert Flooring Installation:</h3>

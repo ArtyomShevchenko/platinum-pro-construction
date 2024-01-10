@@ -69,7 +69,7 @@ export default {
 
 @media (max-width: 425px) {
     :root {
-        --height: 114px;
+        --height: 0px;
     }
 
     .top__title {

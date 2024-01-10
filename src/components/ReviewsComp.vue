@@ -95,6 +95,8 @@ export default {
     background-image: url("../assets/images/home-reviews.jpg");
     background-size: cover;
     background-position: center;
+    padding-top: 210px;
+    padding-bottom: 250px;
 }
 
 .reviews__container--bg-light-filter {}
@@ -102,7 +104,7 @@ export default {
 .reviews__wrapper {}
 
 .reviews__content {
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .reviews__title {
@@ -112,6 +114,7 @@ export default {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-align: center;
 }
 
 .swiper {

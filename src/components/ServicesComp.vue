@@ -63,14 +63,14 @@
     background-image: url("../assets/images/home-services.jpg");
     background-size: cover;
     background-position: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 160px;
+    padding-bottom: 180px;
 }
 
 .services__wrapper {}
 
 .services__content {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
     flex-direction: column;

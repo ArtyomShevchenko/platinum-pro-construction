@@ -1,17 +1,20 @@
 <template>
     <main class="flooring">
-        <TitleComp src="assets/images/flooring/top.jpg">
+        <TitleComp src="assets/images/platinum-pro-moving/top.jpg">
             Platinum Pro Moving
         </TitleComp>
 
-        <OverallComp bg="var(--color-2)" color="var(--color-1)">
+        <OverallTwoImgComp bg="var(--color-2)" color="var(--color-1)">
+            <div class="container">
+                <img src="@/assets/images/platinum-pro-moving/image 1.jpg" alt="Image">
+                <img src="@/assets/images/platinum-pro-moving/image 2.jpg" alt="Image">
+            </div>
             <p>Flooring is not just a practical necessity, it's an essential element that
                 sets the tone for your entire space. At Platinum Pro Construction, we understand the
                 significance of flooring in transforming interiors into stunning canvases of style and comfort.
                 Our range of premium flooring options is designed to cater to diverse tastes and preferences
                 while ensuring uncompromising quality.</p>
-            <img src="../assets/images/flooring/overall-1.jpg" alt="Image">
-        </OverallComp>
+        </OverallTwoImgComp>
 
         <DiscoverComp>
             <h3>Comprehensive Moving Services for a Stress-Free Transition</h3>
@@ -22,7 +25,7 @@
                 you with a seamless and personalized experience that meets your needs.
             </p>
         </DiscoverComp>
-        <ListComp :data="listData" src="assets/images/flooring/main-list.jpg" />
+        <ListComp :data="listData" src="assets/images/platinum-pro-moving/main.jpg" />
         <ContacInfoComp />
     </main>
 </template>
@@ -32,7 +35,7 @@ import TitleComp from "@/components/TitleComp.vue";
 import DiscoverComp from "@/components/DiscoverComp.vue";
 import ListComp from "@/components/ListComp.vue";
 import ContacInfoComp from '@/components/ContacInfoComp.vue';
-import OverallComp from "@/components/OverallComp.vue";
+import OverallTwoImgComp from "@/components/OverallTwoImgComp.vue";
 
 export default {
     components: {
@@ -40,7 +43,7 @@ export default {
         DiscoverComp,
         ListComp,
         ContacInfoComp,
-        OverallComp,
+        OverallTwoImgComp,
     },
     data() {
         return {
