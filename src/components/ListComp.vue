@@ -51,8 +51,8 @@ export default {
     background-position: center;
     position: relative;
     padding-inline: 0;
-    padding-top: calc(50px + var(--padding));
-    padding-bottom: calc(50px + var(--padding));
+    padding-top: calc(3.125rem + var(--padding));
+    padding-bottom: calc(3.125rem + var(--padding));
 }
 
 .main-list__wrapper {}
@@ -62,26 +62,26 @@ export default {
 .main-list__list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .main-list__item {
     display: grid;
-    grid-template-columns: minmax(0, 70px) 1fr;
-    gap: 10px;
+    grid-template-columns: minmax(0, 4.375rem) 1fr;
+    gap: 0.625rem;
     justify-items: start;
 }
 
 .main-list__count {
     color: var(--color-2);
     font-family: var(--font-1);
-    font-size: 50px;
+    font-size: 3.125rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 70px;
+    width: 4.375rem;
     aspect-ratio: 1/1;
-    border: 3px solid var(--color-2);
+    border: 0.1875rem solid var(--color-2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@ export default {
 .main-list__title {
     color: var(--color-2);
     font-family: var(--font-1);
-    font-size: 40px;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
@@ -102,25 +102,25 @@ export default {
 .main-list__title::before {
     content: "";
     display: block;
-    width: calc(100% + 40px);
-    height: 3px;
+    width: calc(100% + 2.5rem);
+    height: 0.1875rem;
     background-color: var(--color-2);
     position: absolute;
     bottom: 0;
-    left: -40px;
+    left: -2.5rem;
 }
 
 .main-list__text {
     color: var(--color-2);
     font-family: var(--font-1);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     grid-column: 2/3;
 }
 
-@media(max-width: 1400px) {
+/* @media(max-width: 1400px) {
     .main-list__content {
         padding-inline: 22px;
     }
@@ -164,5 +164,5 @@ export default {
     .main-list__text {
         font-size: 9px;
     }
-}
+} */
 </style>

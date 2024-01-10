@@ -33,5 +33,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 See[Link](<https://www.figma.com/file/oYmDwrUXl2QeeUAcjmU9ov/Platinum-ProConstruction-(Copy)?node-id=6%3A396&mode=dev>)
 
 ```
+git push origin --delete gh-pages
 git subtree push --prefix dist origin gh-pages
 ```

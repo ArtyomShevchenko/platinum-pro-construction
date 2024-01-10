@@ -12,11 +12,11 @@
 
 <style scoped>
 .discover__container {
-    padding: 222px 0;
+    padding: 13.875rem 0;
 }
 
 .discover__wrapper {
-    max-width: 1310px;
+    max-width: 81.875rem;
 }
 
 .discover__content {
@@ -45,5 +45,9 @@
     font-weight: 400;
     line-height: normal;
     text-align: center;
+}
+
+.discover>>>span {
+    font-weight: 700;
 }
 </style>

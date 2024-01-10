@@ -38,7 +38,7 @@
 export default {
     data() {
         return {
-            isVisible: false,
+            isVisible: true,
             open: false,
             navigation: [
                 { title: "General", href: "/" },
@@ -69,18 +69,18 @@ export default {
 .navigation {
     color: #27374D;
     font-family: Arial;
-    font-size: 10px;
+    font-size: 0.625rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.0375rem;
     text-align: start;
     margin-inline: 1rem;
 }
 
 .burger__icon {
-    width: 16px;
-    height: 10px;
+    width: 1rem;
+    height: 0.625rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -88,8 +88,8 @@ export default {
 }
 
 .burger__icon-line {
-    min-width: 20px;
-    height: 2px;
+    min-width: 1.25rem;
+    height: 0.125rem;
     background-color: var(--color-1);
 }
 
@@ -112,13 +112,13 @@ export default {
 .navigation__list-title {
     color: var(--color-2);
     font-family: "Arial";
-    font-size: 10px;
+    font-size: 0.625rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.6px;
-    padding: 7px 18px 7px 15px;
-    min-width: 70px;
+    letter-spacing: 0.0375rem;
+    padding: 0.4375rem 1.125rem 0.4375rem 0.9375rem;
+    min-width: 4.375rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,11 +129,11 @@ export default {
 .navigation__title {
     color: var(--color-3);
     font-family: "Arial";
-    font-size: 10px;
+    font-size: 0.625rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.0375rem;
     text-align: start;
     cursor: pointer;
 }
@@ -146,12 +146,12 @@ export default {
     display: none;
     color: var(--color-4);
     font-family: Arial;
-    font-size: 8px;
+    font-size: 0.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.6px;
-    padding: 4px 0 4px 20px;
+    letter-spacing: 0.0375rem;
+    padding: 0.25rem 0 0.25rem 1.25rem;
     cursor: pointer;
     transition: color .0s ease;
 }
@@ -173,11 +173,11 @@ export default {
 }
 
 .navigation__cross {
-    width: 12px;
-    height: 12px;
+    width: 0.75rem;
+    height: 0.75rem;
     position: relative;
-    padding: 5px;
-    margin: 7px 18px 7px auto;
+    padding: 0.3125rem;
+    margin: 0.4375rem 1.125rem 0.4375rem auto;
     cursor: pointer;
 }
 
@@ -186,8 +186,8 @@ export default {
     content: "";
     display: block;
     width: 100%;
-    height: 2px;
-    border-radius: 2px;
+    height: 0.125rem;
+    border-radius: 0.125rem;
     background-color: var(--color-3);
     position: absolute;
     inset: 0;
@@ -198,10 +198,4 @@ export default {
 .navigation__cross::after {
     transform: rotate(-45deg);
 }
-
-/* @media (max-width: 1000px) {
-    .navigation {
-        background-color: lime;
-    }
-} */
 </style>

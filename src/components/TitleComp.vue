@@ -31,14 +31,14 @@ export default {
 
 <style >
 :root {
-    --height: 614px;
+    --height: 38.375rem;
 }
 
 .top__container {
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 614px;
+    min-height: 38.375rem;
     min-height: var(--height);
     display: flex;
     align-items: center;
@@ -55,29 +55,29 @@ export default {
 
 @media(max-width: 1024px) {
     :root {
-        --height: 314px;
+        --height: 19.625rem;
     }
 
     .top__container {
-        min-height: calc(var(--height) + 74px);
+        min-height: calc(var(--height) + 4.625rem);
     }
 
     .top__title {
-        font-size: 45px;
+        font-size: 2.8125rem;
     }
 }
 
 @media (max-width: 425px) {
     :root {
-        --height: 0px;
+        --height: 0rem;
     }
 
     .top__title {
         text-align: center;
         font-family: var(--font-1);
-        font-size: 12px;
+        font-size: 0.75rem;
         font-weight: 400;
-        letter-spacing: 0.72px;
+        letter-spacing: 0.045rem;
     }
 }
 </style>

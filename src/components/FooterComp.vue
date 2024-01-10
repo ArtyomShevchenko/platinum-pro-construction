@@ -61,16 +61,16 @@ export default {
     margin-top: auto;
     color: var(--color-1);
     font-family: "Arial";
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.0938rem;
 }
 
 .footer__container {
     background: var(--color-2);
-    padding: 28px 0;
+    padding: 1.75rem 0;
 }
 
 .footer__wrapper {}
@@ -83,13 +83,15 @@ export default {
 
 .footer__social-container {
     display: flex;
-    gap: 28px;
+    gap: 1.75rem;
 }
 
 .footer__social-link {}
 
 .footer__social-link>svg {
-    fill: var(--color-1)
+    fill: var(--color-1);
+    height: 2.5rem;
+    width: 2.5rem;
 }
 
 .router-link-active::before {
@@ -100,9 +102,11 @@ export default {
 .footer__logo {
     fill: var(--color-1);
     stroke: var(--color-1);
-    width: 190px;
-    height: 161px;
+    width: 11.875rem;
+    height: 10.0625rem;
 }
+
+
 
 .footer__navigation {
     flex: 1;
@@ -112,7 +116,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 56px;
+    gap: 1rem;
 }
 
 .footer__navigation-item {
@@ -121,36 +125,26 @@ export default {
 
 .footer__navigation-link {}
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
     .footer__logo {
-        width: 41px;
-        height: 35px;
+        fill: var(--color-1);
+        stroke: var(--color-1);
+        width: 4.1rem;
+        height: 3.5rem;
     }
 
     .footer__navigation-link {
-        font-size: 7px;
+        font-size: 0.7rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 0.42px;
-    }
-
-    .footer__navigation-list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    .footer__social-container {
-        display: flex;
-        gap: 8px;
+        letter-spacing: 0.0262rem;
     }
 
     .footer__social-link>svg {
         fill: var(--color-1);
-        height: 12px;
-        width: 12px;
+        height: 1.2rem;
+        width: 1.2rem;
     }
 }
 </style>

@@ -68,16 +68,13 @@ export default {
             return require(`@/${this.folderPath}/image ${index + 1}.jpg`)
         }
     },
-    mounted() {
-        console.log(this.numberSlides)
-    }
 }
 </script>
 
 <style scoped>
 .swiper__container {
     padding: 0;
-    padding-top: 60px;
+    padding-top: 3.75rem;
 }
 
 .swiper__wrapper {}
@@ -85,12 +82,12 @@ export default {
 .swiper__title {
     color: var(--color-2);
     font-family: var(--font-1);
-    font-size: 75px;
+    font-size: 4.6875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .swiper__content {}
@@ -98,8 +95,8 @@ export default {
 .swiper__swiper {}
 
 .swiper__slide {
-    height: 320px;
-    width: 428px;
+    height: 20rem;
+    width: 26.75rem;
 }
 
 .swiper__slide-image {

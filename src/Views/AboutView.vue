@@ -3,20 +3,15 @@
         <TitleComp src="assets/images/about/about-top.jpg">
             About Us
         </TitleComp>
-
-        <section class="about-goals">
-            <div class="about-goals__container">
-                <div class="about-goals__wrapper">
-                    <div class="about-goals__content">
-                        <p class="about-goals__text"><span>Our goal</span> is to provide various construction-related
-                            services,
-                            deliver
-                            high-quality projects, and meet clients' needs while ensuring safety, efficiency, and
-                            sustainability.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <DiscoverComp>
+            <p>
+                <span>Our goal</span> is to provide various construction-related
+                services,
+                deliver
+                high-quality projects, and meet clients' needs while ensuring safety, efficiency, and
+                sustainability.
+            </p>
+        </DiscoverComp>
 
         <section class="about-main-info">
             <div class="about-main-info__container about-main-info__container--bg-light-filter">
@@ -32,31 +27,31 @@
             </div>
         </section>
 
-        <section class="about-overall">
-            <div class="about-overall__container">
-                <div class="about-overall__wrapper">
-                    <div class="about-overall__content">
-                        <p class="about-overall__text">Overall, the goal of Platinum Pro Construction is to be a
-                            reputable,
-                            reliable, and competitive player in the construction industry, delivering projects that
-                            positively
-                            impact communities and stakeholders while ensuring a sustainable and profitable future for
-                            the
-                            company.</p>
-                        <img src="@/assets/images/about/about-overall.jpg" alt="Image" class="about-overall__img">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <OverallComp>
+            <p>Overall, the goal of Platinum Pro Construction is to be a
+                reputable,
+                reliable, and competitive player in the construction industry, delivering projects that
+                positively
+                impact communities and stakeholders while ensuring a sustainable and profitable future for
+                the
+                company.</p>
+            <img src="@/assets/images/about/about-overall.jpg" alt="Image">
+        </OverallComp>
 
     </main>
 </template>
 
 <script>
-import TitleComp from '@/components/TitleComp.vue'
+import TitleComp from '@/components/TitleComp.vue';
+import DiscoverComp from "@/components/DiscoverComp.vue";
+import OverallComp from "../components/OverallComp.vue"
 
 export default {
-    components: { TitleComp },
+    components: {
+        TitleComp,
+        DiscoverComp,
+        OverallComp,
+    },
     data() {
         return {
             cards: [
@@ -79,48 +74,22 @@ export default {
 </script>
 
 <style scoped>
-.ablout {}
-
-.about-goals {}
-
-.about-goals__container {
-    padding: 160px 0;
+.ablout {
+    padding-bottom: 6.25rem;
 }
-
-.about-goals__wrapper {
-    max-width: 1312px;
-}
-
-.about-goals__content {}
-
-.about-goals__text {
-    color: var(--color-2);
-    text-align: center;
-    font-family: "Arial";
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.about-goals__text span {
-    font-weight: 700;
-}
-
-.about-main-info {}
 
 .about-main-info__container {
     background-image: url("../assets/images/about/about-top.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 132px 0;
+    padding: 8.25rem 0;
 }
 
 .about-main-info__title {
     color: var(--color-2);
     font-family: var(--font-1);
-    font-size: 44px;
+    font-size: 2.75rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -128,10 +97,10 @@ export default {
 }
 
 .about-main-info__cards {
-    margin-top: 100px;
+    margin-top: 6.25rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 126px 38px;
+    grid-template-columns: repeat(auto-fit, minmax(20.625rem, auto));
+    gap: 7.875rem 2.375rem;
     justify-content: center;
 }
 
@@ -142,7 +111,7 @@ export default {
     color: var(--color-2);
     text-align: center;
     font-family: var(--font-1);
-    font-size: 27px;
+    font-size: 1.6875rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -152,77 +121,10 @@ export default {
     color: var(--color-2);
     text-align: center;
     font-family: var(--font-1);
-    font-size: 23px;
+    font-size: 1.4375rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 15px;
-}
-
-.about__overall {}
-
-.about-overall__container {
-    padding: 0;
-}
-
-.about-overall__wrapper {}
-
-.about-overall__content {
-    display: grid;
-    grid-template-columns: 100px 1fr 1fr 100px;
-    place-items: center;
-}
-
-.about-overall__text {
-    max-width: 656px;
-    text-align: start;
-    grid-column: 2/3
-}
-
-.about-overall__img {
-    transform: translateY(-89px);
-    max-width: 440px;
-    aspect-ratio: 1/1.5;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-@media (max-width: 1000px) {
-    .about-overall__text {
-        font-size: 26px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-overall__content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: center;
-        gap: 1rem;
-    }
-
-    .about-overall__text {
-        max-width: 656px;
-        text-align: start;
-        grid-column: auto;
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 550px) {
-    .about-overall__img {
-        transform: translateY(0);
-        max-width: 440px;
-        max-height: 660px;
-        height: 100%;
-        width: 100%;
-    }
-
-    .about-overall__text {
-        font-size: 9px;
-        text-align: center;
-    }
-
+    margin-top: 0.9375rem;
 }
 </style>

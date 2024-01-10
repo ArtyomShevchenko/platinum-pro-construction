@@ -33,8 +33,8 @@ export default {
 }
 
 .navigation__item {
-    height: 50px;
-    padding-inline: 26px;
+    height: 3.125rem;
+    padding-inline: 1.625rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@ export default {
 .navigation__item::after {
     content: "";
     display: block;
-    width: 2px;
+    width: 0.125rem;
     height: 100%;
     background: var(--color-2);
     position: absolute;
@@ -75,7 +75,7 @@ export default {
     content: "";
     display: block;
     width: 85%;
-    height: 2px;
+    height: 0.125rem;
     background: var(--color-2);
     position: absolute;
     bottom: 0;

@@ -47,7 +47,8 @@ export default {
 .overall__wrapper {}
 
 .overall__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .overall>>>p {
@@ -61,59 +62,24 @@ export default {
 }
 
 .overall>>>img {
-    transform: scale(1.3);
+    transform: scale(1.2);
     margin-inline: 70px;
-    max-width: 340px;
     aspect-ratio: 1/1.5;
     object-fit: cover;
+    max-width: 340px;
     height: 100%;
     width: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
-/* .overall>>>img:nth-child(3) {
-    position: absolute;
-    transform: translate(-70%, -130px) scale(1.3);
-    border: 10px solid red;
-} */
-
-
-/* 
-@media (max-width: 1000px) {
-    .overall__text {
-        font-size: 26px;
-    }
-}
-
-@media (max-width: 768px) {
-    .overall__content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: center;
-        gap: 1rem;
-    }
-
-    .overall__text {
-        max-width: 656px;
-        text-align: start;
-        grid-column: auto;
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 550px) {
-    .overall__img {
-        transform: translateY(0);
-        max-width: 440px;
-        max-height: 660px;
-        height: 100%;
+@media(max-width: 650px) {
+    .overall>>>img {
+        transform: scale(1);
+        max-width: 340px;
+        object-fit: contain;
+        margin-inline: auto;
+        max-width: 100%;
         width: 100%;
     }
-
-    .overall__text {
-        font-size: 9px;
-        text-align: center;
-    }
-
-} */
+}
 </style>

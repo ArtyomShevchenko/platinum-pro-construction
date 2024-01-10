@@ -19,7 +19,7 @@ html {
     font-size: calc(100dvw / 1920 * 10)
 }
 
-/* @media(max-width: 1024px) {
+@media(max-width: 1024px) {
     html {
         font-size: calc(100dvw / 768 * 10)
     }
@@ -35,7 +35,7 @@ html {
     html {
         font-size: calc(100dvw / 320 * 10)
     }
-} */
+}
 
 body {
     font-family: var(--font-1);
@@ -43,14 +43,14 @@ body {
 
 *[class*="__container"] {
     position: relative;
-    padding: 100px 0;
+    padding: 10rem 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 *[class*="__wrapper"] {
-    max-width: 1488px;
+    max-width: 149rem;
     margin-inline: auto;
     padding-inline: 1rem;
     position: relative;
@@ -92,48 +92,48 @@ p {
 
 h1 {
     color: var(--color-1);
-    font-size: 104px;
+    font-size: 6.5rem;
     font-weight: 700;
 }
 
 h2 {
     color: var(--color-2);
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
 }
 
 h3 {
     color: var(--color-2);
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: 700;
 }
 
 h4 {
     color: var(--color-2);
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
 p {
     color: var(--color-2);
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 400;
 }
 
 button,
 .button {
-    padding: 15px 71px;
+    padding: 0.9375rem 4.4375rem;
     color: var(--color-2);
     background: linear-gradient(90deg, var(--color-2) 33%, var(--color-1) 66%);
     background-size: 300% 100%;
     background-position: right;
     font-family: var(--font-1);
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 1.5px;
-    border-radius: 30px;
+    letter-spacing: 0.0938rem;
+    border-radius: 1.875rem;
     cursor: pointer;
     transition: background .4s ease, color .2s ease;
 }
